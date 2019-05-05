@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/api/v1/alunos/{id?}', 'alunos@index');
+Route::post('/api/v1/alunos', 'alunos@store');
+Route::post('/api/v1/alunos/{id}', 'alunos@update');
+Route::delete('/api/v1/alunos/{id}', 'alunos@destroy');
