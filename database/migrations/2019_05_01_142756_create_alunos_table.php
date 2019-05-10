@@ -14,10 +14,21 @@ class CreateAlunosTable extends Migration
     public function up()
     {
         Schema::create('alunos', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('nome')->unique();
             $table->date('nascimento');
             $table->integer('serie');
+            $table->string('cep');
+            $table->string('rua');
+            $table->integer('numero');
+            $table->string('complemento');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('nome_mae');
+            $table->date('data_mensalidade');
+            $table->string('cpf_mae');
             $table->timestamps();
         });
     }

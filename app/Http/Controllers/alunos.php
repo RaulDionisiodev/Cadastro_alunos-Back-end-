@@ -42,7 +42,7 @@ class alunos extends Controller
         return aluno::find($id);
     }
 
-    // Edita o caastro de um aluno
+    // Edita o cadastro de um aluno
 
     public function update(Request $request, $id)
     {
